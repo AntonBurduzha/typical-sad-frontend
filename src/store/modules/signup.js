@@ -1,4 +1,5 @@
 import SignupApi from '@/api/signup';
+import router from '@/router';
 
 const state = {
   fetching: false,
@@ -14,6 +15,7 @@ const actions = {
       () => {
         commit('signupSuccess');
         localStorage.setItem('auth', true);
+        router.push('/');
       },
       () => {
         commit('signupError');
