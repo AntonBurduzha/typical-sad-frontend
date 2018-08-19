@@ -4,7 +4,7 @@ import router from '@/router';
 const state = {
   fetching: false,
   error: false,
-  isAuthenticated: JSON.parse(localStorage.auth),
+  isAuthenticated: localStorage.auth ? JSON.parse(localStorage.auth) : false,
 };
 
 const actions = {
