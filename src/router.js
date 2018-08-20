@@ -1,7 +1,9 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import HelloWorld from '@/components/HelloWorld';
+import Home from '@/components/Home';
 import Signup from '@/components/Signup';
+import Table from '@/components/Table';
+import Test from '@/components/Test';
 
 Vue.use(Router);
 
@@ -15,8 +17,17 @@ export default new Router({
     },
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      component: Home,
+      children: [
+        {
+          path: '/',
+          component: Table
+        },
+        {
+          path: '/test',
+          component: Test
+        }
+      ]
     }
   ]
 });
