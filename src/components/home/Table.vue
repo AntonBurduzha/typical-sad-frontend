@@ -16,7 +16,7 @@
 
 <script>
 import { mapState, mapActions } from 'vuex';
-import Loader from './Loader';
+import Loader from '@/components/shared/Loader';
 
 export default {
   name: 'Table',
